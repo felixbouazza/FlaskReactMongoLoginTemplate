@@ -1,4 +1,6 @@
 venv
+bdd
+.env
 
 node_modules
 /.pnp
