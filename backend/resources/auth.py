@@ -30,12 +30,5 @@ class LoginApi(Resource):
         
         expires = datetime.timedelta(days=7)
         access_token = create_access_token(identity=str(user.id), expires_delta=expires)
-        return {
-                'token': access_token,
-                "user": {
-                    "id": str(user.id),
-                    "pseudo": user.pseudo,
-                    "email": user.email
-                }
-            }, 200
+        return { 'token': access_token }, 200
         
