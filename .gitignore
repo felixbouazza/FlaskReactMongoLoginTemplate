@@ -3,6 +3,7 @@ venv
 bdd
 .env
 __pycache__
+conf.js
 
 # Default
 
