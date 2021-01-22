@@ -1,6 +1,10 @@
+# by Me
 venv
 bdd
 .env
+__pycache__
+
+# Default
 
 node_modules
 /.pnp
