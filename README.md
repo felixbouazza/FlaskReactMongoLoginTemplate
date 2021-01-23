@@ -33,17 +33,17 @@ npx --version
 // 7.4.0
 ```
 
-##### MONGO
+##### MongoDB
 ```
 mongod --version
 // db version v4.4.1
 ```
 
-#### POSTMAN
+##### Postman
 
 To test our API
 
-#### ROBO3T
+##### Robo3t
 
 Database Visualization
 
