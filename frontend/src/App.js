@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import {useDispatch} from "react-redux";
-
+import Logged from "./pages/Logged";
+import NonLogged from "./pages/NonLogged";
 import axios from "axios";
 import {backend} from "./conf"
 export default function App() {
@@ -33,8 +34,8 @@ export default function App() {
     getUser();
   }, [token])
 
-  const connect = () => {
-    setToken("eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MTEzNDIyMTYsIm5iZiI6MTYxMTM0MjIxNiwianRpIjoiODcxZGYzMTQtYjc2My00YjZiLTk2ZTUtMmIwM2RlZWFlNTRkIiwiZXhwIjoxNjExOTQ3MDE2LCJpZGVudGl0eSI6IjYwMGIyMTdhY2IxZjM1OTYyNmQ3Njc5NiIsImZyZXNoIjpmYWxzZSwidHlwZSI6ImFjY2VzcyJ9.3oh4JYgViVPRIdFmfTdhCMpz3qVf-_VT-0t_uQK2JhA")
+  const connect = (newToken) => {
+    setToken(newToken)
   }
 
   const disconnect = () => {
@@ -46,17 +47,9 @@ export default function App() {
   return (
     <div className="App">
       {token ? (
-        <>
-        <p>Welcome on you're Dashboard : {user.pseudo}</p>
-        <p>You're email is : {user.email}</p>
-        <p>You're id is : {user.id}</p>
-        <button onClick={disconnect}>Disconnect</button>
-        </>
+        <Logged user={user} disconnect={disconnect}/>
       ):(
-        <>
-        HOMEPAGE
-        <button onClick={connect}>Connect</button>
-        </>
+        <NonLogged connect={connect}/>
       )}
     </div>
   );
