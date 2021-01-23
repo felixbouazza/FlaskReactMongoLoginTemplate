@@ -42,9 +42,13 @@ export default function Login({connect, updateForm}) {
                 <p className="d-inline-block" style={{cursor: "pointer"}} onClick={updateForm}>Pas encore de compte ?</p>
                 <button type="submit" className="btn btn-success" style={{float: "right"}}>Se connecter</button>
             </form>
+
+
             {warningMessage ? (
             <Warning message={warningMessage}/>
             ) : null}
+
+            
         </div>
     )
 }

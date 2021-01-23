@@ -3,8 +3,11 @@ from database.models.user import User
 from flask_restful import Resource
 from flask_jwt_extended import jwt_required, get_jwt_identity
 
+
 class UserApi(Resource):
 
+    # Get User Profile 
+    # Require JWT Token
     @jwt_required
     def get(self):
         user_id = get_jwt_identity()

@@ -22,12 +22,12 @@ class LoginTest(BaseCase):
         response = self.app.post("/api/auth/login", headers={"Content-Type": "application/json"}, data=payload)
 
         # Then
-
         self.assertEqual(str, type(response.json['token']))
         self.assertEqual(200, response.status_code)
 
 
     def test_successful_signup(self):
+
         #Given
         payload = json.dumps({
             "pseudo": "pseudoTest",

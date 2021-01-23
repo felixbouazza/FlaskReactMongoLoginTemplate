@@ -65,14 +65,19 @@ export default function SignUp({updateForm}) {
                 <p className="d-inline-block" style={{cursor: "pointer"}} onClick={updateForm}>Se connecter ?</p>
                 <button type="submit" className="btn btn-success" style={{float: "right"}}>S'inscrire</button>
             </form>
+
+
             {warningMessage ? (
                 <Warning message={warningMessage}/>
             ) : null}
+
+
             {succesfullySignUp ? (
                 <div className="alert alert-success mt-3" role="alert">
                 Votre compte a bien été créé, vous pouvez maintenant vous connecter
                 </div>
             ) : null}
+            
         </div>
     )
 }
