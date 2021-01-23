@@ -97,3 +97,19 @@ mongo --dbpath="bdd"
 ```
 
 You can now open your Postman and ROBO3T Application
+
+## Testing
+
+Comments this line in app.py to use test BDD
+
+```
+app.config['MONGODB_SETTINGS'] = {
+    'host': 'mongodb://localhost:27017/seoapplication'
+}
+```
+
+And run test ( verify you're in venv)
+
+```
+python -m unitest --buffer
+```
