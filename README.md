@@ -27,12 +27,6 @@ npm --version
 // 7.4.0
 ```
 
-##### NPX
-```
-npx --version
-// 7.4.0
-```
-
 ##### MongoDB
 ```
 mongod --version
@@ -82,10 +76,19 @@ npm start
 
 ##### Backend
 
+Inside your backend directory :
+- Create a .env file
+- define 3 items:
+    - FLASK_APP="./app.py"
+    - FLASK_ENV="development"
+    - JWT_SECRET_KEY = 'your JWT SECRET KEY'
+
+
 ```
 cd backend/ 
 source venv/bin/activate
-python app.py
+export APPLICATION_SETTINGS=./.env
+flask run
 ```
 
 ##### Database
@@ -94,3 +97,5 @@ python app.py
 mongo --dbpath="bdd"
 
 ```
+
+You can now open your Postman and ROBO3T Application
