@@ -62,7 +62,6 @@ pip install -r requirements.txt
 
 ```
 mkdir bdd
-
 ```
 
 ## Start
@@ -95,7 +94,6 @@ flask run
 
 ```
 mongo --dbpath="bdd"
-
 ```
 
 You can now open your Postman and ROBO3T Application
