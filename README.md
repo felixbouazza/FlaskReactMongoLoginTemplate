@@ -10,30 +10,30 @@ An application who store all my seo script ideas with front-end dashboard
 
 ## Prerequisite
 
-#### Python
+##### Python
 
 ```
 python3 --version
 // Python 3.8.5
 ```
-#### Node
+##### Node
 ```
 node --version
 // v15.6.0
 ```
-### NPM
+##### NPM
 ```
 npm --version
 // 7.4.0
 ```
 
-#### NPX
+##### NPX
 ```
 npx --version
 // 7.4.0
 ```
 
-#### MONGO
+##### MONGO
 ```
 mongod --version
 // db version v4.4.1
@@ -49,28 +49,48 @@ Database Visualization
 
 ## Installation
 
-#### Frontend
+##### Frontend
 
 ```
 cd frontend/ && npm install 
 ```
 
-#### Backend
+##### Backend
 
 ```
 cd backend/ 
 python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
-python app.py
 ```
 
-#### Database
+##### Database
 
 ```
 mkdir bdd
-mongod --dbpath="bdd"
 
 ```
 
 ## Start
+
+##### Frontend
+
+```
+cd frontend/
+npm start
+```
+
+##### Backend
+
+```
+cd backend/ 
+source venv/bin/activate
+python app.py
+```
+
+##### Database
+
+```
+mongo --dbpath="bdd"
+
+```
