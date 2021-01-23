@@ -7,7 +7,6 @@ from resources.routes import initialize_routes
 from flask_cors import CORS
 from resources.errors import errors
 
-
 app = Flask(__name__)
 
 
@@ -18,9 +17,10 @@ bcrypt = Bcrypt(app)
 jwt = JWTManager(app)
 cors = CORS(app)
 
-app.config["MONGODB_SETTINGS"] = {
-    "host": "mongodb://localhost:27017/seoapplication"
-}
+# COMMENT THIS LINE WHEN TESTING
+# app.config['MONGODB_SETTINGS'] = {
+#     'host': 'mongodb://localhost/seoapplication'
+# }
 
 initialize_db(app)
 initialize_routes(api)
