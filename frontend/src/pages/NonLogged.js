@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import Login from "../components/user/Login"
 import SignUp from "../components/user/SignUp"
+
+
 export default function NonLogged({connect}) {
 
     const [ changeForm, setChangeForm ] = useState(false)

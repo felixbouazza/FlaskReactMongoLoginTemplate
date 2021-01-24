@@ -18,9 +18,9 @@ jwt = JWTManager(app)
 cors = CORS(app)
 
 # COMMENT THIS LINE WHEN TESTING
-# app.config['MONGODB_SETTINGS'] = {
-#     'host': 'mongodb://localhost/seoapplication'
-# }
+app.config['MONGODB_SETTINGS'] = {
+    'host': 'mongodb://localhost/seoapplication'
+}
 
 initialize_db(app)
 initialize_routes(api)

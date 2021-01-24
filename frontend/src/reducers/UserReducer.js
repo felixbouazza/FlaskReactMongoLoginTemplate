@@ -10,7 +10,10 @@ const INITIAL_STATE = {
 function UserReducer(state = INITIAL_STATE, action) {
     switch(action.type) {
         case "LOGIN":
-            return state
+            return {
+                token: action.payload.token,
+                user: action.payload.user
+            }
         default:
             return state
     }
