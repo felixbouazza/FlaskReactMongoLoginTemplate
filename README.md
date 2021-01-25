@@ -12,23 +12,23 @@ An application who store all my seo script ideas with front-end dashboard
 
 ##### Python
 
-```
+```sh
 python3 --version
 // Python 3.8.5
 ```
 ##### Node
-```
+```sh
 node --version
 // v15.6.0
 ```
 ##### NPM
-```
+```sh
 npm --version
 // 7.4.0
 ```
 
 ##### MongoDB
-```
+```sh
 mongod --version
 // db version v4.4.1
 ```
@@ -45,13 +45,13 @@ Database Visualization
 
 ##### Frontend
 
-```
+```sh
 cd frontend/ && npm install 
 ```
 
 ##### Backend
 
-```
+```sh
 cd backend/ 
 python3 -m venv venv
 source venv/bin/activate
@@ -60,7 +60,7 @@ pip install -r requirements.txt
 
 ##### Database
 
-```
+```sh
 mkdir bdd
 ```
 
@@ -68,7 +68,7 @@ mkdir bdd
 
 ##### Frontend
 
-```
+```sh
 cd frontend/
 npm start
 ```
@@ -83,7 +83,7 @@ Inside your backend directory :
     - JWT_SECRET_KEY = 'your JWT SECRET KEY'
 
 
-```
+```sh
 cd backend/ 
 source venv/bin/activate
 export APPLICATION_SETTINGS=./.env
@@ -92,7 +92,7 @@ flask run
 
 ##### Database
 
-```
+```sh
 mongo --dbpath="bdd"
 ```
 
@@ -102,7 +102,7 @@ You can now open your Postman and ROBO3T Application
 
 Comments this line in app.py to use test BDD
 
-```
+```py
 app.config['MONGODB_SETTINGS'] = {
     'host': 'mongodb://localhost:27017/seoapplication'
 }
@@ -110,6 +110,6 @@ app.config['MONGODB_SETTINGS'] = {
 
 And run test ( verify you're in venv)
 
-```
+```sh
 python -m unitest --buffer
 ```
